@@ -208,7 +208,7 @@ function gpRunner() { // keep the birds moving at a set pace
 
   //console.log(gp_speed)
 
-  if (parseInt(bp.style.left) > screen.width * window.devicePixelRatio) {
+  if (parseInt(bp.style.left) > screen.width * window.devicePixelRatio) { // optimise for mobile screens
   bp.style.left = getRandomInt(87)
   bp.style.top = getRandomInt(76)
   // if the bomb reaches the end, the game continues and the bomb resets to a random position at the start
