@@ -132,7 +132,7 @@ let gp_timer = setInterval(gpRunner,gp_speed);  // movement speed of birds
 
 function gpRunner() { // keep the birds moving at a set pace
 
-  if (parseInt(gp.style.left) > screen.width * window.devicePixelRatio) {
+  if (parseInt(gp.style.left) > screen.width * window.devicePixelRatio) { // optimise for mobile screens
   clearInterval(gp_timer)
   gameOver() // if the birds reach the end, the game ends
   return
@@ -156,7 +156,7 @@ function gpRunner() { // keep the birds moving at a set pace
 
   function npRunner() { // keep the birds moving at a set pace
 
-    if (parseInt(np.style.left) > screen.width) {
+    if (parseInt(np.style.left) > screen.width * window.devicePixelRatio) {
     clearInterval(np_timer)
     gameOver() // if the birds reach the end, the game ends
     return
@@ -181,7 +181,7 @@ function gpRunner() { // keep the birds moving at a set pace
 
     function opRunner() { // keep the birds moving at a set pace
 
-      if (parseInt(op.style.left) > screen.width) {
+      if (parseInt(op.style.left) > screen.width * window.devicePixelRatio) {
       clearInterval(op_timer)
       gameOver() // if the birds reach the end, the game ends
       return
